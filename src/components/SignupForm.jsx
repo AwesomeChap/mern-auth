@@ -30,6 +30,10 @@ const SignupForm = (props) => {
 	const handleSubmit = (e) => {
 		e.preventDefault()
 
+		if(!password.length || !username.length || !lastName.length || !firstName.length){
+			alert('All fields are required!');
+		}
+
 		console.log('React',{
 			lastName, firstName, username, password
 		})

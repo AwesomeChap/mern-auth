@@ -20,6 +20,9 @@ const LoginForm = (props) => {
 	}
 
 	const handleSubmit = async (e) => {
+		if(!password.length || !username.length){
+			alert('Empty password or username');
+		}
 		e.preventDefault();
 		await props.handleLogin(username, password);
 		setRedirectTo('/');
