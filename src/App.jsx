@@ -63,7 +63,7 @@ const App = () => {
 	}
 
 	const handleLogin = (username, password) => {
-		axios.post('/auth/login', {
+		return axios.post('/auth/login', {
 				username,
 				password
 			}).then(({ data, status }) => {
