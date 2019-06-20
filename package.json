@@ -1,0 +1,43 @@
+{
+  "name": "mern-auth",
+  "author": "awesomeChap",
+  "private": true,
+  "dependencies": {
+    "axios": "*",
+    "bcrypt": "*",
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "connect-mongo": "*",
+    "dotenv": "*",
+    "express": "*",
+    "express-session": "*",
+    "mongoose": "*",
+    "morgan": "*",
+    "passport": "*",
+    "passport-local": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-router-dom": "*"
+  },
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "start": "node server/server.js"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "node-sass": "^4.12.0"
+  }
+}
