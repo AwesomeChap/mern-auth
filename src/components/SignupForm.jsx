@@ -30,24 +30,21 @@ const SignupForm = (props) => {
 	const handleSubmit = (e) => {
 		e.preventDefault()
 
-		if(!password.length || !username.length || !lastName.length || !firstName.length){
+		if (!password || !username || !lastName || !firstName) {
 			alert('All fields are required!');
 		}
-
-		console.log('React',{
-			lastName, firstName, username, password
-		})
-
-		axios.post('/auth/signup', {
-			lastName, firstName, username, password
-		}).then(({ data }) => {
-			if (!data.errmsg) {
-				console.log('signup - success')
-				setRedirectTo('/login');
-			} else {
-				console.log('duplicate');
-			}
-		}).catch(e => console.log(e))
+		else {
+			axios.post('/auth/signup', {
+				lastName, firstName, username, password
+			}).then(({ data }) => {
+				if (!data.errmsg) {
+					console.log('signup - success')
+					setRedirectTo('/login');
+				} else {
+					console.log('duplicate');
+				}
+			}).catch(e => console.log(e))
+		}
 	}
 
 	if (redirectTo) {
@@ -67,7 +64,7 @@ const SignupForm = (props) => {
 
 			<label htmlFor="password">Password: </label>
 			<input type="password" name="password" value={password} onChange={handlePwdChange} />
-			
+
 			<div><button onClick={handleSubmit}>Sign up</button></div>
 		</div>
 	)
