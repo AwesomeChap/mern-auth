@@ -46,8 +46,8 @@ const App = () => {
 				console.log('User already logged in !')
 				setLoggedIn(true);
 				setUser(data.user);
-				setLoaded(true);
 			}
+			setLoaded(true);
 		})
 	}, [])
 
